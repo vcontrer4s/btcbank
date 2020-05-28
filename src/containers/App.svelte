@@ -1,4 +1,6 @@
 <script>
+    import Menu from '../components/Menu.svelte';
+    import Contenido from '../components/Contenido.svelte';
 
 </script>
 
@@ -7,15 +9,17 @@
     @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
     :global(body) {
-        background-color: #fafafa;
-        color: rgba(38, 38, 38, 0.7);
+        background-color: #212529;
         font-family: "Lato" sans-serif;
         margin: 0;
         padding: 0;
     }
-    :global(h1, h2, h3) {
-        margin: 0;
-        padding: 0; 
+    :global(img) {
+        width: 100%; 
     }
 
 </style>
+
+<Menu />
+<Contenido />
+
