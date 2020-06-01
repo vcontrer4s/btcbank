@@ -1,22 +1,76 @@
-<div class="container">
-    <nav class="bg-dark navbar fixed-top navbar-expand-lg navbar-dark">
-      <a class="navbar-brand" href="#">Altchain</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+<script>
+  import { onMount } from "svelte";
+  import { bandera } from "../store/store.js";
+
+  function mostrarForm(nueva) {
+    bandera.update(n => nueva);
+  }
+</script>
+
+<style>
+
+</style>
+
+<div class="Menu">
+  <div class="bg-secondary">
+    <h3 class="text-center">Menu</h3>
+    <div class="btn-group-vertical btn-block">
+      <button
+        id="menuRegistrar"
+        type="button"
+        class="btn btn-secondary dropdown-toggle-middle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false">
+        Registrar
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#header">Inicio<span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#content">Contenido</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contáctanos</a>
-          </li>
-        </ul>
+      <div class="dropdown-menu" aria-labelledby="menuRegistro">
+        <a
+          on:click={() => mostrarForm('Cliente')}
+          class="dropdown-item"
+          href="#">
+          Cliente
+        </a>
+        <a
+          on:click={() => mostrarForm('Receptor')}
+          class="dropdown-item"
+          href="#">
+          Receptor
+        </a>
+        <a
+          on:click={() => mostrarForm('Proveedor')}
+          class="dropdown-item"
+          href="#">
+          Proveedor
+        </a>
+        <a
+          on:click={() => mostrarForm('Portal')}
+          class="dropdown-item"
+          href="#">
+          Portal
+        </a>
+        <a
+          on:click={() => mostrarForm('Operador')}
+          class="dropdown-item"
+          href="#">
+          Operador
+        </a>
       </div>
-    </nav>
+    </div>
+    <div class="btn-group-vertical btn-block">
+      <button
+        id="menuRegistrar"
+        type="button"
+        class="btn btn-secondary dropdown-toggle-middle"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false">
+        Procesar
+      </button>
+      <div class="dropdown-menu" aria-labelledby="menuRegistro">
+        <a class="dropdown-item" href="#">Arbitraje</a>
+        <a class="dropdown-item" href="#">Remesas</a>
+      </div>
+    </div>
   </div>
+</div>

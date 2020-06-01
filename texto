@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Lanzamiento</title>
+</head>
+
+<body>
+  <div class="container">
+    <nav class="bg-dark navbar fixed-top navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#">Sitio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#header">Inicio<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#content">Contenido</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contáctanos</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <header id="header">
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col-md-6 my-auto">
+          <div class="header-content-left">
+            <img src="./img/spacex.jpg" alt="crewDragon">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="header-content-right text-white-50">
+            <h1 class="text-white display-4">Crew Dragon</h1>
+            <p class="text-justify">Dragon 2 (también conocido como Crew Dragon) es la segunda versión de la nave SpaceX
+              Dragon, un vehículo espacial para transporte de pasajeros y capaz de hacer un aterrizaje suave. Incluye un
+              conjunto de cuatro puestos de propulsión montadas lateralmente con dos motores SuperDraco cada uno, que
+              pueden servir como sistema de aborto de lanzamiento o para ser usado en aterrizajes suaves
+              etropropulsados. Además, tiene ventanas mucho más grandes, patas de aterrizaje que se extienden desde la
+              parte inferior de la nave espacial, nuevos ordenadores de vuelo y aviónica, y el rediseño de los paneles
+              solares, todos empaquetados en una nave espacial con una línea de molde exterior cambiada respecto del
+              Dragón de carga inicial que ha estado volando durante varios años.
+            </p>
+            <a target="_blank" href="https://www.nasa.gov/" class="mt-2 btn btn-outline-secondary btn-lg">Ver más</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section id="testimonial">
+    <div class="container">
+      <p class="h2 mb-2 font-italic text-white-50">
+        "El próximo 27 de mayo se llevará a cabo la primera misión tripulada de la Crew Dragon"
+      </p>
+      <p class="h4 text-aling-center text-white-50">-Jim Bridenstine, administrador de la NASA</p>
+    </div>
+  </section>
+
+  <section id="content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="info-left">
+            <img src="./img/crewDragon.jpeg" alt="Crew Dragon" class="mt-5">
+          </div>
+        </div>
+        <div class="my-auto text-white-50 col-md-6">
+          <div class="info-right">
+            <h2 class="text-white">Próximo lanzamiento</h2>
+            <p class="text-justify">Los protagonistas, más allá de los vehículos, serán los astronautas de la NASA
+              Robert Behnken y Douglas Hurley, quienes según lo planificado llegarán a la ISS 24 horas después del
+              lanzamiento y permanecerán allí entre 6 y 16 semanas. La hora estipulada son las siguientes:
+            <ul>
+              <li> España: 22:33 en la Península y las 21:33 en Canarias.</li>
+              <li> México, Ecuador, Colombia: 15:33</li>
+              <li> Venezuela, Chile, Bolivia, Cuba: 16:33</li>
+              <li> Argentina: 17:33</li>
+            </ul>
+            Tanto SpaceX como la NASA emitirán un streaming desde las propias webs, aunque podéis ir directamente a sus
+            canales de YouTube, o bien a la web NASATV en Ustream.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="row my-5">
+      <div class="col-md-6 text-white-50 text-justify" id="cont-izq">
+        <h2 class="text-white">Objetivo de la misión</h2>
+        <p>El objetivo de esta misión es validar el sistema de transporte con tripulación de SpaceX y la NASA,
+          incluyendo la plataforma de lanzamiento, el cohete, la cápsula y la capacidad operacional. Será además la
+          primera vez que el sistema se prueba en órbita con unos astronautas a bordo.</p>
+      </div>
+      <div class="col-md-6 text-white-50 text-justify" id="cont-der">
+        <h2 class="text-white">Cometido de cada astronáuta</h2>
+        <p>Behnken se encargará de las operaciones de unión y desunión con la ISS, así como de las actividades de la
+          misión Demo-2 mientras la cápsula permanece acoplada, y Hurley será responsable del lanzamiento, aterrizaje y
+          recuperación. Ambos fueron seleccionados como astronautas de la nasa en el año 2000 y han realizado dos vuelos
+          espaciales.</p>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <footer id="contact">
+    <div id="ima" style="background-image: url(./img/volando.jpg); background-size: cover;">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <form class="card bg-transparent">
+              <div class="card-body">
+                <div class="form-group">
+                  <input type="text" placeholder="Nombre" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="email" placeholder="E-mail" class="form-control">
+                </div>
+                <div class="form-group">
+                  <textarea placeholder="Mensaje" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-secondary btn-block">Enviar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script src=" https://code.jquery.com/jquery-3.5.1.slim.min.js"
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+<!-- Smooth scrolling -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="./js/script.js"></script>
+<script>
+  // smooth scrolling
+  $(document).ready(function () {
+    // Add smooth scrolling to all links
+    $("a").on('click', function (event) {
+
+      // Make sure this.hash has a value before overriding default behavior
+      if (this.hash !== "") {
+        // Prevent default anchor click behavior
+        event.preventDefault();
+
+        // Store hash
+        var hash = this.hash;
+
+        // Using jQuery's animate() method to add smooth page scroll
+        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          // Add hash (#) to URL when done scrolling (default click behavior)
+          window.location.hash = hash;
+        });
+      } // End if
+    });
+  });
+</script>
+
+</html>
+
+display block
+hay elementos que por defecto son block
+en computed podemos verlo
+block acepta modificaciones de altura y anchura
+ocupa todo el espacio del padre
+
+display inline
+no acepta cambios en su altura o anchura
+solo ocupa el espacio de los hijos
+
+display inline-block
+es la combinacion de inline + block
+podemos cambiar su anchura y altura
+
+display flex
+tiene las caracteristicas de un elemento block
+pero sus hijos aceptan anchura y altura
+
+display inline-flex
+es como inline
+podemos manipular los hijos
+no se puede aplicar anchura ni altura pero a los hijos si
+
+
+
+
+
+
+
+  
+
+
