@@ -4,16 +4,18 @@
 
   function mostrarForm(nueva) {
     bandera.update(n => nueva + 1);
-    console.log(nueva)
+    console.log(nueva);
   }
 
-  const opciones = [
-    { registrar: "Cliente"},
-    { registrar: "Receptor"},
-    { registrar: "Proveedor"},
-    { registrar: "Portal"},
-    { registrar: "Operador"}
+  const opcionesR = [
+    { registrar: "Cliente" },
+    { registrar: "Receptor" },
+    { registrar: "Proveedor" },
+    { registrar: "Portal" },
+    { registrar: "Operador" }
   ];
+
+  const opcionesP = [{ procesar: "Arbitraje" }, { procesar: "Remesas" }];
 </script>
 
 <style>
@@ -34,11 +36,8 @@
         Registrar
       </button>
       <div class="dropdown-menu" aria-labelledby="menuRegistro">
-        {#each opciones as { registrar }, i}
-          <a
-            on:click={() => mostrarForm( i )}
-            class="dropdown-item"
-            href="#">
+        {#each opcionesR as { registrar }, i}
+          <a on:click={() => mostrarForm(i)} class="dropdown-item" href="#">
             {registrar}
           </a>
         {/each}
@@ -55,8 +54,11 @@
         Procesar
       </button>
       <div class="dropdown-menu" aria-labelledby="menuRegistro">
-        <a class="dropdown-item" href="#">Arbitraje</a>
-        <a class="dropdown-item" href="#">Remesas</a>
+        {#each opcionesP as { procesar }, i}
+          <a on:click={() => mostrarForm(i+5)} class="dropdown-item" href="#">
+            {procesar}
+          </a>
+        {/each}
       </div>
     </div>
   </div>

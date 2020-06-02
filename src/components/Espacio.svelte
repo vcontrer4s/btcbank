@@ -12,10 +12,10 @@
   import Arbitraje from "./Arbitraje.svelte";
   import Remesas from "./Remesas.svelte";
   let bander;
-    const establecerForm = bandera.subscribe(value => {
-      bander = value;
-      console.log(bander);
-    });
+  const establecerForm = bandera.subscribe(value => {
+    bander = value;
+    console.log(bander);
+  });
 
   const componentes = [
     { component: Principal },
@@ -23,9 +23,11 @@
     { component: Receptor },
     { component: Proveedor },
     { component: Portal },
-    { component: Operador }
-  ];
+    { component: Operador },
 
+    { component: Arbitraje },
+    { component: Remesas }
+  ];
 </script>
 
 <style>
@@ -34,7 +36,9 @@
 
 <div class="Espacio">
   <div class="bg-secondary">
-    <h3 class="text-center">Registro de {componentes[bander].component.name.toString()}</h3>
-    <svelte:component this={componentes[1].component} />
+    <h3 class="text-center">
+      Registro de {componentes[bander].component.name.toString()}
+    </h3>
+    <svelte:component this={componentes[7].component} />
   </div>
 </div>
