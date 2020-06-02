@@ -3,8 +3,17 @@
   import { bandera } from "../store/store.js";
 
   function mostrarForm(nueva) {
-    bandera.update(n => nueva);
+    bandera.update(n => nueva + 1);
+    console.log(nueva)
   }
+
+  const opciones = [
+    { registrar: "Cliente"},
+    { registrar: "Receptor"},
+    { registrar: "Proveedor"},
+    { registrar: "Portal"},
+    { registrar: "Operador"}
+  ];
 </script>
 
 <style>
@@ -25,36 +34,14 @@
         Registrar
       </button>
       <div class="dropdown-menu" aria-labelledby="menuRegistro">
-        <a
-          on:click={() => mostrarForm('Cliente')}
-          class="dropdown-item"
-          href="#">
-          Cliente
-        </a>
-        <a
-          on:click={() => mostrarForm('Receptor')}
-          class="dropdown-item"
-          href="#">
-          Receptor
-        </a>
-        <a
-          on:click={() => mostrarForm('Proveedor')}
-          class="dropdown-item"
-          href="#">
-          Proveedor
-        </a>
-        <a
-          on:click={() => mostrarForm('Portal')}
-          class="dropdown-item"
-          href="#">
-          Portal
-        </a>
-        <a
-          on:click={() => mostrarForm('Operador')}
-          class="dropdown-item"
-          href="#">
-          Operador
-        </a>
+        {#each opciones as { registrar }, i}
+          <a
+            on:click={() => mostrarForm( i )}
+            class="dropdown-item"
+            href="#">
+            {registrar}
+          </a>
+        {/each}
       </div>
     </div>
     <div class="btn-group-vertical btn-block">

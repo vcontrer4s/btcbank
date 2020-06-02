@@ -11,17 +11,21 @@
 
   import Arbitraje from "./Arbitraje.svelte";
   import Remesas from "./Remesas.svelte";
-
   let bander;
-
-  onMount(async () => {
     const establecerForm = bandera.subscribe(value => {
       bander = value;
-      if (!bander) {
-        bander = "Principal";
-      }
+      console.log(bander);
     });
-  });
+
+  const componentes = [
+    { component: Principal },
+    { component: Cliente },
+    { component: Receptor },
+    { component: Proveedor },
+    { component: Portal },
+    { component: Operador }
+  ];
+
 </script>
 
 <style>
@@ -30,11 +34,7 @@
 
 <div class="Espacio">
   <div class="bg-secondary">
-    <h3 class="text-center">Espacio</h3>
-    {#if bander === 'Principal'}
-      <Principal />
-      {:else if bander === 'Cliente'}
-      <Cliente />
-    {/if}
+    <h3 class="text-center">Registro de {componentes[bander].component.name.toString()}</h3>
+    <svelte:component this={componentes[1].component} />
   </div>
 </div>
