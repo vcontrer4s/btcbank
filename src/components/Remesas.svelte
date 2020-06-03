@@ -93,6 +93,14 @@
               </select>
             </div>
           </div>
+          <div class="form-group col-6">
+              <label for="transfer">Número de Transferencia**</label>
+              <input
+                type="number"
+                class="form-control"
+                id="transfer"
+                aria-describedby="transferHelp" />
+            </div>
           <Botones />
         </form>
       </div>

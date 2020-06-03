@@ -31,7 +31,9 @@
 </script>
 
 <style>
-
+.Espacio{
+  border-radius: 5px;
+}
 </style>
 
 <div class="Espacio">
@@ -39,6 +41,6 @@
     <h3 class="text-center">
       Registro de {componentes[bander].component.name.toString()}
     </h3>
-    <svelte:component this={componentes[7].component} />
+    <svelte:component this={componentes[bander].component} />
   </div>
 </div>
