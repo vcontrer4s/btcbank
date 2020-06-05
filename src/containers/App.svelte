@@ -1,9 +1,25 @@
 <script>
+  import { mostrarl } from "../store/store";
+
   import Barra from "../components/Barra.svelte";
   import Menu from "../components/Menu.svelte";
   import Indicadores from "../components/Indicadores.svelte";
   import Espacio from "../components/Espacio.svelte";
+  import Principal from "../components/Principal.svelte";
+  import Acceder from "../components/Acceder.svelte";
+  import Alt from "../components/Alt.svelte";
 
+  let comp;
+
+  const establecerForm = mostrarl.subscribe(value => {
+    if (value == 0) {
+      comp = Principal;
+    } else if (value == 1) {
+      comp = Acceder;
+    } else {
+      comp = Alt;
+    }
+  });
 </script>
 
 <style>
@@ -29,15 +45,7 @@
 <div class="margen">
   <div class="container">
     <div class="row">
-      <div class="col-3 p-0">
-        <Menu />
-      </div>
-      <div class="col-6 p-0">
-        <Espacio />
-      </div>
-      <div class="col-3 p-0">
-        <Indicadores />
-      </div>
+        <svelte:component this={comp} />
     </div>
   </div>
 </div>

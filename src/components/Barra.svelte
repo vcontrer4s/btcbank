@@ -1,3 +1,19 @@
+<script>
+  import { mostrarl } from "../store/store.js";
+
+  let btnLog = "Login";
+
+  function mostrarLogin() {
+    if ((btnLog == "Login")) {
+      mostrarl.update(n => 1);
+      btnLog = "Principal";
+    } else {
+      btnLog = "Login";
+      mostrarl.update(n => 0);
+    }
+  }
+</script>
+
 <div class="container">
   <nav class="bg-dark navbar fixed-top navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="www.altchain.com">Altchain</a>
@@ -14,8 +30,8 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="">
-            Login
+          <a on:click={() => mostrarLogin()} class="nav-link" href="#">
+            {btnLog}
           </a>
         </li>
         <li class="nav-item active">

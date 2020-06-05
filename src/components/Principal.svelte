@@ -28,7 +28,7 @@
             </p>
             <a
               target="_blank"
-              href="https://www.altchain.com"
+              href="#"
               class="mt-1 btn btn-outline-light btn-block btn-lg">
               Ver más
             </a>

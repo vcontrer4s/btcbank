@@ -1,5 +1,4 @@
 <script>
-  import { onMount } from "svelte";
   import { bandera } from "../store/store.js";
 
   import Principal from "./Principal.svelte";

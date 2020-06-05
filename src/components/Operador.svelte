@@ -27,6 +27,24 @@
                 aria-describedby="discountHelp" />
             </div>
           </div>
+          <div class="form-row">
+            <div class="form-group col-6">
+              <label for="user">Usuario</label>
+              <input
+                type="number"
+                class="form-control"
+                id="user"
+                aria-describedby="userHelp" />
+            </div>
+            <div class="col-6">
+              <label for="pass">Contraseña</label>
+              <input
+                type="number"
+                class="form-control"
+                id="pass"
+                aria-describedby="passHelp" />
+            </div>
+          </div>
           <Botones />
         </form>
       </div>
