@@ -13,7 +13,6 @@
   let bander;
   const establecerForm = bandera.subscribe(value => {
     bander = value;
-    console.log(bander);
   });
 
   const componentes = [

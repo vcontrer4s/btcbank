@@ -11,7 +11,7 @@
   <div class="container">
     <div class="row">
       <div class="col my-auto">
-      <form>
+      <form class="needs-validation" novalidate> 
         <BaseForm />
         <Botones />
       </form>

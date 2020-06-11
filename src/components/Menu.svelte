@@ -4,7 +4,6 @@
 
   function mostrarForm(nueva) {
     bandera.update(n => nueva + 1);
-    console.log(nueva);
   }
 
   const opcionesR = [

@@ -1,15 +1,43 @@
 <script>
+  let num;
+  let v;
 
+  function validarn(num, t) {
+    if (!num || num < t.min || num > t.max) {
+      v = " is-invalid";
+      t.value = "";
+      t.focus();
+    } else {
+      v = " is-valid";
+    }
+  }
+  const mensaje = ["Este campo es necesario", "Por favor verifica este campo"];
 </script>
+
+<style>
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+</style>
 
 <div class="form-row">
   <div class="form-group col-6">
     <label for="id">Cédula</label>
     <input
+      step="1"
       type="number"
-      class="form-control"
+      class="form-control {v}"
       id="id"
-      aria-describedby="idHelp" />
+      aria-describedby="idHelp"
+      required
+      autocomplete="off"
+      min="111111"
+      max="9999999999"
+      bind:value={num}
+      on:blur={validarn(num, this)} />
+    <div class="invalid-feedback">{mensaje[1]}</div>
   </div>
   <div class="form-group col-6 my-auto">
     <div class="form-check form-check-inline">
@@ -27,7 +55,8 @@
         type="radio"
         name="inlineRadioOptions"
         id="sex2"
-        value="option2" />
+        value="option2"
+        checked />
       <label class="form-check-label" for="sex2">Hombre</label>
     </div>
   </div>
@@ -39,7 +68,12 @@
       type="text"
       class="form-control"
       id="name"
-      aria-describedby="nameHelp" />
+      aria-describedby="nameHelp"
+      required
+      autocomplete="off"
+      maxlength="15"
+      minlength="3" />
+    <div class="invalid-feedback">{mensaje[2]}</div>
   </div>
   <div class="form-group">
     <label for="lastname">Apellidos</label>
