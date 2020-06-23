@@ -1,43 +1,12 @@
 <script>
-  let num;
-  let v;
-
-  function validarn(num, t) {
-    if (!num || num < t.min || num > t.max) {
-      v = " is-invalid";
-      t.value = "";
-      t.focus();
-    } else {
-      v = " is-valid";
-    }
-  }
-  const mensaje = ["Este campo es necesario", "Por favor verifica este campo"];
+  import Numeros from "./elements/Numeros";
+  import Textos from "./elements/Textos";
 </script>
-
-<style>
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-</style>
 
 <div class="form-row">
   <div class="form-group col-6">
     <label for="id">Cédula</label>
-    <input
-      step="1"
-      type="number"
-      class="form-control {v}"
-      id="id"
-      aria-describedby="idHelp"
-      required
-      autocomplete="off"
-      min="111111"
-      max="9999999999"
-      bind:value={num}
-      on:blur={validarn(num, this)} />
-    <div class="invalid-feedback">{mensaje[1]}</div>
+    <Numeros />
   </div>
   <div class="form-group col-6 my-auto">
     <div class="form-check form-check-inline">
@@ -64,33 +33,23 @@
 <div class="form-row">
   <div class="form-group col-6">
     <label for="name">Nombres</label>
-    <input
-      type="text"
-      class="form-control"
-      id="name"
-      aria-describedby="nameHelp"
-      required
-      autocomplete="off"
-      maxlength="15"
-      minlength="3" />
-    <div class="invalid-feedback">{mensaje[2]}</div>
+    <Textos />
   </div>
   <div class="form-group">
     <label for="lastname">Apellidos</label>
-    <input
-      type="text"
-      class="form-control"
-      id="lastname"
-      aria-describedby="lastnameHelp" />
+    <Textos />
   </div>
 </div>
 
-<label for="address">Dirección</label>
+<label for="address">Dirección Calle y Numero</label>
 <input
+  placeholder="Bolivar 23"
   type="address"
   class="form-control"
   id="address"
-  aria-describedby="addressHelp" />
+  aria-describedby="addressHelp"
+  pattern="[A-Za-z0-9]{10,50}"
+ />
 <div class="form-row">
   <div class="form-group col-6">
     <label for="country">Pais</label>
@@ -114,11 +73,7 @@
 <div class="form-row">
   <div class="form-group col-6">
     <label for="phone">Teléfono</label>
-    <input
-      type="number"
-      class="form-control"
-      id="phone"
-      aria-describedby="phoneHelp" />
+    <Numeros min="1111111" max="999999999" />
   </div>
   <div class="form-group col-6">
     <label for="email">Email</label>
