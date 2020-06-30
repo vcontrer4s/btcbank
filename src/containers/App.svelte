@@ -45,8 +45,8 @@
 <div class="margen">
   <div class="container">
     <div class="row">
-      <svelte:component this={comp} />
-      <!-- <svelte:component this={Alt} /> -->
+      <!-- <svelte:component this={comp} /> -->
+      <svelte:component this={Alt} />
     </div>
   </div>
 </div>

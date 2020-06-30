@@ -8,7 +8,6 @@
   function validarn(num, t) {
     if (!num || num < t.min || num > t.max) {
       v = " is-invalid";
-      t.value = "";
       t.focus();
     } else {
       v = " is-valid";
